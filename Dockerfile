@@ -5,4 +5,4 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17-oracle
 COPY --from=build /target/backend-0.0.1-SNAPSHOT.jar backend.jar
 EXPOSE 8080
-ENTRYPOINT ["jar", "backend.jar"]
+ENTRYPOINT ["java", "backend.jar"]
